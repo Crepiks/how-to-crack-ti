@@ -1,0 +1,1 @@
+# Answers from Sayazhan for Hot To Crack Your First Technical Interview questions
