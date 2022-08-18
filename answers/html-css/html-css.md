@@ -28,3 +28,96 @@ There are two types of SEO optimizations: internal and external. Internal optimi
 4. Minimizing JavaScript and CSS resources
 5. Usage of Web Workers for parallelizing computation
 6. Dividing client resources into chunks
+
+## What does async and defer refer in script tag? Describe the difference between `<script>`, `<script async>` and `<script defer>`
+
+`<script async>` and `<script defer>` changes the behavior of script loading to the web page. Both attributes makes script load despite on HTML content loading. `<script async>` loads script completely asynchronously with no dependecy on other scripts. `script defer>` loads script asynchronously but preserves the order of other defered scripts. `<script defer>` executes script only after DOM tree is built.
+
+## What is desktop first and mobile first design approach?
+
+Desktop first is the approach when desktop version of the web application is built first and only then the content is adapt to mobile screens. The mobile first approach is the opposite.
+
+## How to make page responsive?
+
+We can web page responsive using media queries. This is the most common approach. Also, the markup of web page can be changed from JavaScript depending on screen size.
+
+## What are the building blocks of HTML5?
+
+HTML5 is well known for its semantic approach to markup. For building block in HTML5 tags with specific semantic meaning are used.
+
+## What is difference between Select and Datalist?
+
+Select does not allow values different from those in the list. Datalist allows use manualy enter the different value of choose specific from presets.
+
+## What are the semantic tags available in html5?
+
+1. `<section` - content for grouped content
+2. `<main>` - the main content
+3. `<article>` - independent content
+4. `<header` and `<footer>` - for header and footer respectively
+
+## Why you would like to use semantic tag?
+
+Semantic tags allow better search engine optimization by dividing content into meaningful parts. Also, usage of semantic tags improves accessibility of the web page (screen readers).
+
+## What is accessibility? ARIA role means in a web application
+
+Accessibility is the measurement of comfortability of the web page for different types of content consumption. For instance, for consuming the content of web page through screen readers. ARIA is a set of tools allowing better accessibility. In web ARIA refers to several attributes adding meta information for page elements.
+
+## What is the purpose of the `alt` attribute on images?
+
+`alt` attribute's content is shown when image for some reason could not be loaded. Also, the content of `alt` attribute is used by screen readers to describe picture over voice.
+
+## Define semantic markup. What are the semantic meanings for `<section>`, `<article>`, `<aside>`, `<nav>`, `<header>`, `<footer>` and when/how should each be used in structuring html markup?
+
+1. `<section>` is used for grouping related content
+2. `<article` is used to define card with indepdented content
+3. `<aside>` is used to define unrelated content positioned on the side
+4. `<nav>` is used to define block with navigation links
+5. `<header>` is used to define persistent top part of the page
+6. `<footer>` is used to define persistent bottom part of the page
+
+## When should you use `section`, `div` or `article`?
+
+1. `section` is for wide (usually full-width) grouped content
+2. `article` is for independent card
+3. `div` is for all cases when no semantic tag is applicable
+
+## What is an iframe and how it works?
+
+`iframe` is a tag which allows to load inside it independent HTML documents.
+
+## Describe the difference between a `cookie`, `sessionStorage` and `localStorage`?
+
+Despite obvious difference in the storage volume, `cookie` can store content for specific period of time. `sessionStorage` stores content as long as session in the browser exists. `localStorage` stores content as long as it is not deleted. Also, `cookie` stores data on the server side and are sent with every request.
+
+## What are the possible ways to apply CSS styles to a web page?
+
+1. By using `style` attribute.
+2. By using `<style>` tag.
+3. By linking stylesheet through `<link>` tag.
+4. By applying styles from JavaScript.
+
+## What does the cascading portion of CSS mean?
+
+Cascading means that the impact of several style rules will be overrided by rules with higher priority.
+
+## New features in CSS3
+
+Gradients, opacity, transitions, keyframes, variables.
+
+## What is CSS preprocessor?
+
+Preprocessor is a language used to define style with specific extensions which is compiled into usual CSS.
+
+## What are media queries?
+
+Media queries are used to defined portion of styles which should be applied on specific screen types and sizes.
+
+## What does box-sizing do?
+
+`box-sizing` changes the way the size of the content is calculated (whether to include borders and paddings or not).
+
+## Explain some pros and cons for CSS animations versus JavaScript animations
+
+CSS animations are simpler and easy to apply. JavaScript animations are more difficult in implementation and requires more perfomance, however, they allow complex animations.
