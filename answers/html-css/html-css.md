@@ -2,7 +2,7 @@
 
 ## What is Critical Rendering Path?
 
-None.
+Critical Rendering Path is a collection of steps that make a path between the time browser gets an HTML page and starts building the webpage for users to visualize.
 
 ## What is the DOM? How does the DOM work?
 
@@ -10,7 +10,9 @@ DOM stands of Document Object Model. DOM is a tree structural representation of 
 
 ## Explain the difference between layout, painting and compositing?
 
-None.
+Layout - browser determines how much space each element requires and where it needs to be placed.
+Painting - the process of filling pixels and drawing out elements.
+Compositing - browsers draws elemments in a correct order.
 
 ## What are the Benefits of Server Side Rendering (SSR) Over Client Side Rendering (CSR)?
 
