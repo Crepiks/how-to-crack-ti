@@ -79,3 +79,41 @@ Synchronous functions which modify state.
 ## How do you perform mutations in components?
 
 By calling `store.commit('name of the mutation')`.
+
+## What are vuex actions?
+
+Actions are functions which call mutations. Actions can be asynchronous when mutations should always be synchronous.
+
+## Give an example usage of actions?
+
+Actions for loading posts which call HTTP request and passes result into mutation.
+
+## What are modules in vuex?
+
+Modules are grouped set of actions, mutations, state and getters with specific namespace.
+
+## How do you represent one way data flow in vuex?
+
+Actions are called from components. Actions always call mutations. Mutations change state. State is retrieved through getters by components.
+
+## How do you display store state in vue components?
+
+We can access state through `mapState` or `this.store.state`. Also, state data can be retrieved through getters.
+
+## How do you dispatch actions?
+
+We can `mapActions` or call `this.store.dispatch('action name')`.
+
+## What are the principles enforced by vuex?
+
+1. Single source of truth
+2. Data is readonly
+3. Mutations are always synchronous
+
+## What is vue router and their features?
+
+Vue Router provides interface over web application routing for Vue instance. It allows to define routes, handle transitions and execute code on route hooks.
+
+## What are the steps to use vue router and give an example?
+
+In order to use Vue Router we need to create an instance of Vue Router and provide it to Vue instance.
