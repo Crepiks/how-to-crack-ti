@@ -2,43 +2,43 @@
 
 ## What is VueJS?
 
-VueJS is a client side JavaScript framework which allows developers to be more performant when developing web applications.
+VueJS is a client side JavaScript framework which allows developers to be more performant when developing web applications. In comparison with ReactJS VueJS has more structured arhictecture. In comparison with Angular VueJS is more flexible and leaves developers space for freedom.
 
 ## What is the difference between v-show and v-if directives?
 
-`v-show` adds `display: none` CSS attribute to the element so that element disapears from web page but remains present in DOM. `v-if` completely removes element from DOM.
+`v-show` adds `display: none` CSS attribute to the element so that element disapears from web page but remains present in DOM. `v-if` completely removes element from DOM. `v-if` is more proper for situations when element does not switch very often. `v-show` otherwise is better in situations when element is toggled often because requires less perfomance for each toggling.
 
 ## Why do you need to use key attribute on for directive?
 
-`key` attribute is used to uniquely indentify element in the list and to present unnecessary rebuilding.
+`key` attribute is used to uniquely indentify element in the list and to prevent unnecessary rebuilding. Usually it is better to use ID of the entity as a `key`.
 
 ## What are props?
 
-Props is a reactive data passing into component.
+Props are specific types of attributes which allows data to be passed down through the tree of components. Props are reactive meaning that changing the prop value will cause re-render of the component.
 
 ## How do you communicate from child to parent using events?
 
-By emitting events and passing data in second argument.
+Events are another type of communication mechanism between components which allows data to be passed from child component to parent. Events are created by `emit` method which accepts event name and additional payload.
 
 ## How do you implement model on custom input components?
 
-By using `model` param and specifing input prop and output event.
+To implement two-way binding there must be a prop and event in the component. In component declaration special `model` object allows configuring the value and prop which will be used by `v-model` directive.
 
 ## What are slots?
 
-Slots are markups passed in inside the tags into component.
+Slots is a mechanism which allows child component manipulate data passed by parent component inside tags. By using slots child component can decide where to place (or not to place) data/markup provided by parent.
 
 ## What are mixins?
 
-Mixins is a code which can be added into component.
+Mixin is a part of component logic placed outside. Mixin can extend component's configuration and allows to prevent code duplication by placing repetitive parts outside and reusing them. Mixins are considered as anti-patterns because they make the origins of some component's logic unclear.
 
 ## What is scoped CSS?
 
-Scoped CSS is a styles which are applied to specific component and its children.
+Scopes CSS is a special type of CSS code which applies only to current component and its children. Scoped CSS has no effect on parent and sibling elements.
 
 ## Why the component data must be a function?
 
-Component data is a function to prevent sharing data among all instances of the component.
+While reading VueJS documentation you could notice that the example of simple app with single instance of application uses object as a data. In contrast, SFC (single file components) use function instead of object for data declaration. Usage of functions prevents sharing the same state between different instances of the same component. When having no components it is possible to use object because there are no other instances of component which can depend on this state.
 
 ## What are the lifecycle methods of VueJS?
 
@@ -50,7 +50,7 @@ Is an instance of Vue application with scoped global context, components, store 
 
 ## What are the conditional directives?
 
-Conditional directives are directives used to conditionaly render or display elements.
+Conditional directives are directives which accepts boolean as a value to decide whether to render the element or not.
 
 ## Why should not use if and for directives together on the same element?
 
