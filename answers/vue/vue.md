@@ -62,31 +62,31 @@ Methods which modify initial array and trigger updates of view.
 
 ## What is the purpose of v-for directive?
 
-To render list of elements according to data from interable.
+`v-for` directive is used to go through iterable instance and render piece of markup on each interation. For instance, `v-for` is needed when rendering a list of posts going through array of posts.
 
 ## What is vuex?
 
-Is is a global store of Vue.
+Vuex is one of two (the second is Pinia) primary global stores of VueJS ecosystem. It is used to make reactive data be directly accessible from everywhere in components tree. This mechanism eliminates the need to pass data and events through several components till reaching the target component.
 
 ## What are vuex getters?
 
-Functions which output and (usually) transform state state.
+There are two ways to retrieve data from Vuex global store. First using the direct access to state and the second is through getters. Getters are functions which ideally return and modify state into more comfortable for format for consumption.
 
 ## What are vuex mutations?
 
-Synchronous functions which modify state.
+Mutations are SYNCHRONOUS functions which accept state and optionally additional payload and modifies state. The main reason of creation mutations was to make predictable and observable mechanism of state changing.
 
 ## How do you perform mutations in components?
 
-By calling `store.commit('name of the mutation')`.
+Mutations can be executed in two ways. First, by calling `.commit` method of store object and passing mutation name as string. Second, by using `.mapMutatations` method from `vuex` package which add mutation method directly into scope of the component.
 
 ## What are vuex actions?
 
-Actions are functions which call mutations. Actions can be asynchronous when mutations should always be synchronous.
+Because mutations are not allowed to be asynchronous there is another type of store functions which can perform asynchronous tasks. Actions have access to context and can be asynchronous. Usually after making asynchronous task actions call mutations through the context object.
 
 ## Give an example usage of actions?
 
-Actions for loading posts which call HTTP request and passes result into mutation.
+In blog application actions can be used to perform asynchronous request to external API and then call mutation to set retrieved posts into state (from where posts will be accessible by UI).
 
 ## What are modules in vuex?
 
