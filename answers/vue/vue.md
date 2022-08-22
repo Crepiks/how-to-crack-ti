@@ -58,7 +58,7 @@ Conditional directives are directives which accepts boolean as a value to decide
 
 ## What are the array detection mutation methods?
 
-Methods which modify initial array and trigger updates of view.
+Usually modification of complex data types does not trigger re-render of the view so it is recommended to reassign value to manually notify about data change. In contrast, array detection mutation methods change initial array but allows reactive UI to be notified about changes.
 
 ## What is the purpose of v-for directive?
 
@@ -90,7 +90,7 @@ In blog application actions can be used to perform asynchronous request to exter
 
 ## What are modules in vuex?
 
-Modules are grouped set of actions, mutations, state and getters with specific namespace.
+Modules are grouped set of actions, mutations, state and getters with specific namespace. Modules are used to decompose domains into separate similar parts.
 
 ## How do you represent one way data flow in vuex?
 
@@ -98,7 +98,7 @@ Actions are called from components. Actions always call mutations. Mutations cha
 
 ## How do you display store state in vue components?
 
-We can access state through `mapState` or `this.store.state`. Also, state data can be retrieved through getters.
+We can access state through `mapState` or `this.store.state`. Also, state data can be retrieved through getters rather by direct access or `mapGetters` method.
 
 ## How do you dispatch actions?
 
@@ -116,4 +116,22 @@ Vue Router provides interface over web application routing for Vue instance. It 
 
 ## What are the steps to use vue router and give an example?
 
-In order to use Vue Router we need to create an instance of Vue Router and provide it to Vue instance.
+In order to use Vue Router we need to create an instance of Vue Router and provide it to Vue instance. When creating vue router instance we need to pass routes declaration.
+
+```js
+// in router.js
+const router = new VueRouter({
+    routes: [
+        {
+            path: '/',
+            name: 'index',
+            component: SomeVueComponent
+        }
+    ]
+})
+
+// in main.js
+const app = new Vue({
+    router
+}).$mount('#app')
+```
