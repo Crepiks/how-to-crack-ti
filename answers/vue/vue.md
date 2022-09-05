@@ -121,17 +121,45 @@ In order to use Vue Router we need to create an instance of Vue Router and provi
 ```js
 // in router.js
 const router = new VueRouter({
-    routes: [
-        {
-            path: '/',
-            name: 'index',
-            component: SomeVueComponent
-        }
-    ]
-})
+  routes: [
+    {
+      path: "/",
+      name: "index",
+      component: SomeVueComponent,
+    },
+  ],
+});
 
 // in main.js
 const app = new Vue({
-    router
-}).$mount('#app')
+  router,
+}).$mount("#app");
 ```
+
+## What are functional components?
+
+Functional component is a component which has no local state and is rendered only according to the props.
+
+## What are async components?
+
+Is a component which defines different states depending on the status of promise.
+
+## How do you force update?
+
+You can use `this.$forceUpdate()` method or change the `:key` prop of the component.
+
+## What is composition API?
+
+Composition API is another way of declaring logic of Single File Component. It allows to group related parts of component's logic despite the type of the code.
+
+## Can I use computed property in another computed property?
+
+Yes, you can. Newly created computed property will trigger re-render when computed property which it depends on changes.
+
+## How do you achieve conditional group of elements?
+
+To group elements into logical part in order to use conditional directive you can wrap them in a `<template>` tag.
+
+## How do you use event handlers?
+
+The `@` symbol is used to attach event handler to the component. For example, `<component @click="handleClick" />`.
