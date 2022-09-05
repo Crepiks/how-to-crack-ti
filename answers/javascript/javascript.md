@@ -171,3 +171,129 @@ Spread operator is an operator which allows unwraping array of object.
 ## What is nodejs?
 
 NodeJS is a platform which allows execution of JavaScript on platforms other than browser.
+
+## What are the possible ways to create objects in JavaScript?
+
+The most common way to create object is to declare it directly using curly braces.
+
+```js
+{
+  foo: "bar";
+}
+```
+
+Another way to create object is using contructor function with `new` keyword.
+
+```js
+const newObject = new ContructorFunction();
+```
+
+Also object can be created using `Object.create` function which accepts prototype and params.
+
+```js
+const newObject = Object.create();
+```
+
+## What are the problems with global variables?
+
+Global variables sometimes rewrite values of each other. This can lead to uninstantional change of the value when connecting several scripts to the same page.
+
+## How do you check whether a string contains a substring?
+
+You can use several handy methods of the string object. `.contains()`, `.indexOf()` and `.lastIndexOf()`.
+
+## How do you check if a key exists in an object?
+
+You can use `.hasProperty()` or `.hasOwnProperty()` methods of the object.
+
+## What is the main difference between Object.values and Object.entries method?
+
+`Object.values()` return the array of values of the object when `Object.entries()` return the array consisting of array with key and value.
+
+## How can you get the list of keys of any object?
+
+Use can use method `Object.keys()`.
+
+## What is a WeakSet?
+
+Is a data structure which allows to store unique links to objects. Adding link which already exists in `WeakSet` will have no effect.
+
+## What are the differences between WeakSet and Set?
+
+The main differences between `Set` and `WeakSet` are that `WeakSet` can only store objects not primitive values and eliminates object if there are no other links to it.
+
+## What is a WeakMap?
+
+`WeakMap` operates the same way as `WeakSet` but stores data in key-value format.
+
+## What is the difference between proto and prototype?
+
+`__proto__` is a link to prototype of current object while `prototype` allows configuring objects created by constructur function.
+
+## Why do you need JSON?
+
+JSON is a unified format to send data accross different systems written in different languages.
+
+## How do you define JSON arrays?
+
+They are defined using brackets - the same way we define them in JavaScript. Example `[1, 2, 3]`
+
+## What is the purpose of the array slice method?
+
+`.slice` method allows to copy specified part of an array and return it as a new array.
+
+## What is the purpose of the array splice method?
+
+`.splice` modified initial array and can remove and add elements in the middle of it.
+
+## What is a first class function?
+
+First class functions are functions which can be manipulated as a usual object. For example, first class functions can be passed as a value to another function.
+
+## What is a higher order function?
+
+Higher order function is a function which accepts a functions and returns a function be modifing or extending it.
+
+## What is a unary function?
+
+Unary function is a function which accept only one argument.
+
+## What is an anonymous function?
+
+Anonymous function is a function which does not have a name and is usually used in the same place it is declared.
+
+## What is promise.all?
+
+`Promise.all()` is a function which accepts array of promises and return new promise which resolves when all promises are resolved. If one or the passed promises will be rejected the whole expression will be rejected too.
+
+## What is the purpose of race method in promise?
+
+`Promise.race()` allows to get the result of the fastest promise passed into it.
+
+## What is a strict mode in javascript?
+
+Strict mode is a mode which makes several JavaScript cases throw explicit error. For instance, in strict mode developer will see error when trying to access not declared variable. Strict mode is enabled by `use strict` string at the beginning of the file.
+
+## What are PWAs?
+
+PWA is a Progressive Web Application. PWA consits of several cutting edge technologies of web platform and usually is installable on home screen.
+
+## How do you get the current url with javascript?
+
+Use can use expressiong `window.location.href`.
+
+## What is memoization?
+
+Memoization is a caching on code level. Memoization prevents execution of complex pure function by taking result from stored data structure.
+
+## How do you detect javascript disabled in the page?
+
+You can place content which will be shown to the user when JS is disabled in `<noscript>` tag.
+
+## How do you encode an URL?
+
+By using `encodeURI()` method.
+
+## How do you decode an URL?
+
+By using `decodeURI()` method.
