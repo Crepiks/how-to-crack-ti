@@ -123,3 +123,47 @@ Media queries are used to defined portion of styles which should be applied on s
 ## Explain some pros and cons for CSS animations versus JavaScript animations
 
 CSS animations are simpler and easy to apply. JavaScript animations are more difficult in implementation and requires more perfomance, however, they allow complex animations.
+
+## What is CSS flexbox?
+
+CSS Flexbox is a set of css rules which allows wide range control under the positioning of the element and its children. In comparison to CSS Grid CSS Flexbox controls children elemenets only over one main axis.
+
+## What is the difference between the “nth-child()” and “nth-of-type()” selectors?
+
+`nth-child()` applies rule to element which are located right after each other. `nth-of-type()` applies rules to elements even if there are other elements between them.
+
+## When to use css grid and flexbox?
+
+The difference between CSS Grid and CSS Flex is that CSS Flexbox enables control over only one axis while CSS Grid can manipulate children over two axis. CSS Flexbox is simpler and if your goal is to center element or position children over main axis it is better to use it. In more complex cases CSS Grid is more appropriate.
+
+## What is CSS BEM?
+
+CSS BEM is a naming convention made by Yandex. It restricts how css selectors can be named and allows more predictable way of managing style reusability accross the project.
+
+## How do you specify units in the CSS?
+
+Units are used right after the number literal. Example `10px` or `50vh`.
+
+## What is the difference between RGBa, HEX and HSLa?
+
+Those are different ways to specify color in CSS. RGBa uses declaration of red, green and blue parts of the color in couple with alpha (opacity). HEX is a hexadecimal representation of the color which is similar to RGBa but uses hexadecimal numbers in its structure. HSLa uses combination of hue, saturation and lightness.
+
+## What is the difference between class selectors and id selectors?
+
+They use different attributes to target the element on the page. Futhermore, according to the rule of id attribute usage there should not be elements with the same ids as a result the id selector usually targets only one element.
+
+## What is the difference between Pseudo-classes and pseudo-elements?
+
+Pseudo-classes define different states of the targeted element while pseudo-elements define additional structures which are appended to the targeted element.
+
+## What are the css selectors?
+
+CSS selectors are the expressions aimed to locate elements on the page and apply css rules to them.
+
+## What does CORS stand for and what issue does it address?
+
+CORS is a Cross Origin Resource Sharing. It is a policy of the most web browsers which prevents client side JavaScript to make requests to server which did not explicitly allow to send requests to them.
+
+## Explain the use of rel="nofollow", rel="noreferrer", rel="noopener" attribute?
+
+`nofollow` specifies for Search Engines to prevent page from being endorsed by the current page. `noreferrer` hides refering page information when followed by link. `noopener` prevents new tab from being able to get information of origin tab.
